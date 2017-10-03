@@ -1,0 +1,117 @@
+body{
+    padding-top: 65px;
+}
+
+.bg_silver {
+    background-color: silver
+}
+
+#navbar_title{
+    font-size: x-large;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar {
+    background-color: #054182;
+}
+
+
+#input_image {
+    overflow: hidden;
+}
+
+#profile_edit {
+    display: none;
+}
+
+
+.profile_icon_small{
+    width: 32pt;
+    height: 32pt;
+
+    background-color: white;
+    border-radius: 50%;
+}
+
+.profile_icon_medium{
+    width: 48pt;
+    height: 48pt;
+
+    background-color: white;
+}
+
+
+.font_smaller {
+    font-size: smaller;
+}
+
+.font_large {
+    font-size: large;
+}
+
+.border_top {
+    border-top: 1px solid #ccd6d6;
+}
+
+.flex {
+    flex: 1;
+}
+
+.break_word {
+    word-break: break-all;
+}
+
+
+/*Buttons*/
+.btn_post_del:hover,
+.btn_post_edit:hover,
+.btn_post_like:hover,
+.btn_post_dislike:hover,
+.btn_post_heart:hover {
+    opacity: 1;
+}
+
+.btn_post_del,
+.btn_post_edit,
+.btn_post_like,
+.btn_post_dislike,
+.btn_post_heart {
+    border: 0;
+    background: 0;
+    padding: 0;
+    opacity: 0.15;
+    transition: all 0.5s;
+}
+
+.btn_post_del,
+.btn_post_edit {
+    font-size: smaller;
+}
+
+.btn_post_edit {
+    margin-left: 5pt;
+}
+
+.btn_post_edit,
+.btn_post_dislike {
+    color: #000;
+}
+
+.btn_post_like {
+    color: #08F;
+}
+
+.btn_post_del,
+.btn_post_heart {
+    color: #F00;
+}
+
+.btn_post_active {
+    opacity: 1;
+}
+
+.btn_profile {
+    width: 150px;
+    margin: 3pt;
+}

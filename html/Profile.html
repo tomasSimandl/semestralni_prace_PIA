@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Kivbook</title>
+
+        <link rel="stylesheet" href="../css/kivbook.css">
+
+
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+        <!--DatePicker-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.standalone.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+
+        <!--OpenIconic-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.css" />
+
+        <script src="../js/kivbook.js"></script>
+    </head>
+    <body class="bg_silver">
+        <!--Navigation bar of page-->
+        <nav class="navbar fixed-top px-0">
+            <div class="container flex-nowrap">
+
+                <a id="navbar_title" class="navbar-brand" href="Wall.html">KivBook</a>
+
+                <form class="form-inline">
+                    <div class="input-group">
+                        <input class="form-control form-control-sm" type="text" placeholder="Search" aria-label="Search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-sm btn-primary" type="submit">
+                                <span class="oi oi-magnifying-glass" aria-hidden="true"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+
+            </div>
+        </nav>
+
+        <div class="container p-1">
+            <div class="rounded bg-light">
+                <div class="row mx-0">
+
+                    <!--Profile picture-->
+                    <div class="col-12 col-md-4 p-0 p-md-2 bg-white rounded">
+                        <img class="w-100" alt="profile picture"
+                             src="../images/maxpixel.freegreatpicture.com-Sith-Darth-Vader-Vader-Star-Wars-Figure-Space-2023850.png"/>
+                    </div>
+
+                    <!--Info/Edit-->
+                    <div class="col-12 col-md-8">
+
+                        <!--Profile info panel-->
+                        <div id="profile_info" class="m-3">
+                            <div class="row mb-4">
+                                <div class="col-md-4 font-weight-bold">Full name</div>
+                                <div class="col-md-8">Darth Vader</div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-4 font-weight-bold">Address</div>
+                                <div class="col-md-8">Hvězda smrti, 357 patro, pokoj číslo 111</div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-4 font-weight-bold">Age</div>
+                                <div class="col-md-8">85</div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-4 font-weight-bold">Sex</div>
+                                <div class="col-md-8">Male</div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-4 font-weight-bold">Visibility</div>
+                                <div class="col-md-8">Public</div>
+                            </div>
+                            <a class="btn btn-primary text-white btn_profile" href="Friends.html">Show friends</a>
+                            <button class="btn btn-warning btn_profile" onclick="open_edit_profile()">
+                                Edit profile
+                            </button>
+                        </div>
+
+                        <!--Profile edit panel-->
+                        <div id="profile_edit" class="m-3">
+                            <form>
+                                <!--Full name-->
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-4 font-weight-bold" for="input_name">Full name</label>
+                                    <input id="input_name" class="form-control col-md-8" type="text" placeholder="Full name"
+                                           required>
+                                </div>
+
+                                <!--Address-->
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-4 font-weight-bold" for="input_address">Address</label>
+                                    <input id="input_address" class="form-control col-md-8" type="text" placeholder="Address">
+                                </div>
+
+                                <!--Date of birth-->
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-4 font-weight-bold" for="input_date">Date of
+                                        birth</label>
+                                    <div class="input-group date col-md-8 p-0">
+                                        <input id="input_date" type="text" class="form-control" placeholder="Date of birth">
+                                        <div class="input-group-addon">
+                                            <span class="oi oi-calendar"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Sex-->
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-4 font-weight-bold" for="select_sex">Sex</label>
+                                    <div class="col-md-8 p-0">
+                                        <select id="select_sex" class="form-control custom-select">
+                                            <option selected>Choose your sex</option>
+                                            <option value="1">Male</option>
+                                            <option value="2">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!--Visibility-->
+                                <fieldset class="form-group">
+                                    <div class="row">
+                                        <label class="col-form-legend col-md-4 font-weight-bold">Visibility</label>
+                                        <div class="col-md-8">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="radio" name="privacyRadio"
+                                                           id="privacy_radio_1" value="1" checked>
+                                                    Public profile
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="radio" name="privacyRadio"
+                                                           id="privacy_radio_2" value="2">
+                                                    Profile visible only by friends
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="radio" name="privacyRadio"
+                                                           id="privacy_radio_3" value="3">
+                                                    Private profile
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+
+                            <!--Change password dialog-->
+                            <div id="password_change_dialog" class="modal">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Change password</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <input id="input_change_password_old" class="form-control" type="password" placeholder="Old password" required>
+                                                <input id="input_change_password_new" class="form-control mt-2" type="password" placeholder="New password" required>
+                                                <input id="input_change_password_new_conf" class="form-control mt-2" type="password" placeholder="New password confirmation" required>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Change password</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn_profile" onclick="close_edit_profile()">
+                                Save profile
+                            </button>
+                            <button class="btn btn-secondary btn_profile" onclick="close_edit_profile()">Cancel</button>
+                            <button type="button" class="btn btn-warning btn_profile" data-toggle="modal" data-target="#password_change_dialog">Change password</button>
+                            <button class="btn btn-danger btn_profile">Delete profile</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Post-->
+            <div class="card mt-2">
+
+                <!--Post header-->
+                <div class="card-header row m-0 px-3">
+                    <img class="profile_icon_small align-self-center mr-3 " alt="profile picture"
+                         src="../images/maxpixel.freegreatpicture.com-Sith-Darth-Vader-Vader-Star-Wars-Figure-Space-2023850.png"/>
+
+                    <div class="flex">
+                        <!--Name-->
+                        <div class="break_word">
+                            <a class="text-dark font-weight-bold" href="Profile.html">Darth Vader</a>
+                        </div>
+                        <!--Date-->
+                        <span class="m-0 font_smaller">10:13 11.3.2017</span>
+                        <!--Controls-->
+                        <div class="d-inline-block">
+                            <button class="oi oi-pencil btn_post_edit" aria-hidden="true"></button>
+                            <button class="oi oi-x btn_post_del" aria-hidden="true"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Post body-->
+                <div class="card-body">
+                    Jsem skvělej
+                </div>
+
+                <!--Post comments + likes-->
+                <div class="card-footer">
+
+                    <!--Footer controls-->
+                    <div class="m-0 mb-2 row justify-content-between">
+                        <a class="font-weight-bold text-dark" data-toggle="collapse" href="#collapse_2" aria-expanded="false" aria-controls="collapse_2">
+                            Comments
+                        </a>
+                        <div>
+                            <button class="oi oi-thumb-up btn_post_like btn_post_active" aria-hidden="true"></button>
+                            <button class="oi oi-heart btn_post_heart" aria-hidden="true"></button>
+                            <button class="oi oi-thumb-down btn_post_dislike" aria-hidden="true"></button>
+                        </div>
+                    </div>
+
+                    <!--Comments-->
+                    <div class="collapse" id="collapse_2">
+
+                        <!--New comment-->
+                        <div class="input-group border_top pt-3">
+                            <input id="comment_input_2" type="text" class="form-control" placeholder="New comment"  aria-label="New Comment">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button">Add</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

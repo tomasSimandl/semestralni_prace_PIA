@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Kivbook</title>
+
+        <link rel="stylesheet" href="../css/kivbook.css">
+
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+        <!--DatePicker-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.standalone.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+
+        <!--OpenIconic-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.css" />
+
+        <script src="../js/kivbook.js"></script>
+    </head>
+
+    <body class="bg_silver">
+        <!--Navigation bar of page-->
+        <nav class="navbar fixed-top px-0">
+            <div class="container flex-nowrap">
+
+                <a id="navbar_title" class="navbar-brand">KivBook</a>
+
+                <form class="form-inline">
+                    <div class="input-group">
+                        <input class="form-control form-control-sm" type="text" placeholder="Search" aria-label="Search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-sm btn-primary" type="submit">
+                                <span class="oi oi-magnifying-glass" aria-hidden="true"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </nav>
+
+        <div class="container p-1">
+            <div class="row m-0 justify-content-center">
+                <div id="form_container" class="col-12 col-md-7 col-lg-6 col-xl-5 bg-light border rounded p-3">
+
+                    <!--Navigation login/register-->
+                    <ul class="nav nav-tabs justify-content-center" role="tablist">
+                        <li class="nav-item text-center col-6">
+                            <a id="login_tab" class="nav-link active text-dark" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-expanded="true">Login</a>
+                        </li>
+                        <li class="nav-item text-center col-6">
+                            <a id="register_tab" class="nav-link text-dark" data-toggle="tab" href="#register" role="tab" aria-controls="register">Register</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content mt-4">
+
+                        <!--Login panel-->
+                        <div id="login" class="tab-pane fade show active" role="tabpanel" aria-labelledby="login_tab">
+                            <form>
+                                <input id="input_login_email" class="form-control mt-4" type="email" placeholder="Email address" required autofocus>
+                                <input id="input_login_password" class="form-control mt-4" type="password" placeholder="Password" required>
+                                <button class="btn btn-primary btn-block mt-4" type="submit">Sign in</button>
+                            </form>
+                        </div>
+
+                        <!--Register panel-->
+                        <div id="register" class="tab-pane fade" role="tabpanel" aria-labelledby="register_tab">
+
+                            <form class="break_word">
+
+                                <!--Image loader-->
+                                <div class="mt-2">
+                                    <label for="input_image">Profile picture</label>
+                                    <label class="custom-file w-100">
+                                        <input id="input_image" class="custom-file-input" type="file">
+                                        <span class="custom-file-control"></span>
+                                    </label>
+                                </div>
+
+                                <!--Full name-->
+                                <div class="mt-2">
+                                    <label for="input_name">Full name*</label>
+                                    <input id="input_name" class="form-control" type="text" placeholder="Full name" required>
+                                </div>
+
+                                <!--Email-->
+                                <div class="mt-2">
+                                    <label for="input_register_email">Email address*</label>
+                                    <input id="input_register_email" class="form-control" type="email" placeholder="Email address" required>
+                                </div>
+
+                                <!--Password-->
+                                <div class="mt-2">
+                                    <label for="input_register_password">Password*</label>
+                                    <input id="input_register_password" class="form-control" type="password" placeholder="Password" required>
+                                </div>
+                                <!--Confirmation password-->
+
+                                <div class="mt-2">
+                                    <label for="input_password_conf">Password confirmation</label>
+                                    <input id="input_password_conf" class="form-control" type="password" placeholder="Password confirmation" required>
+                                </div>
+
+                                <!--Address-->
+                                <div class="mt-2">
+                                    <label for="input_address">Address</label>
+                                    <input id="input_address" class="form-control" type="text" placeholder="Address">
+                                </div>
+
+                                <!--Date of birth-->
+                                <div class="mt-2">
+                                    <label for="input_date">Date of birth</label>
+                                    <div class="input-group date">
+                                        <input id="input_date" type="text" class="form-control" placeholder="Date of birth">
+                                        <div class="input-group-addon">
+                                            <span class="oi oi-calendar"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Sex-->
+                                <div class="mt-2">
+                                    <label for="select_sex">Sex</label>
+                                    <select id="select_sex" class="form-control custom-select">
+                                        <option selected>Choose your sex</option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                    </select>
+                                </div>
+
+                                <!--Privacy-->
+                                <div class="form-check mt-4">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="privacyRadio" id="privacy_radio_1" value="1" checked>
+                                        Public profile
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="privacyRadio" id="privacy_radio_2" value="2">
+                                        Profile visible only by friends
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="privacyRadio" id="privacy_radio_3" value="3">
+                                        Private profile
+                                    </label>
+                                </div>
+
+                                <div class="form-group mt-4">
+                                    <label class="" for="robot_check">Zadejte číslici 8*</label>
+                                    <input type="text" class="form-control" id="robot_check" aria-describedby="robot login check" required>
+                                </div>
+
+                                <small class="text-muted">
+                                    Inputs with * are required
+                                </small>
+                                <button class="btn btn-primary btn-block mt-4" type="submit">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
