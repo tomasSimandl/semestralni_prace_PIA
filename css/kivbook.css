@@ -21,6 +21,7 @@ body{
     overflow: hidden;
 }
 
+#btn_image_input,
 #profile_edit {
     display: none;
 }
@@ -114,4 +115,17 @@ body{
 .btn_profile {
     width: 150px;
     margin: 3pt;
+}
+
+.btn_file {
+    position: relative;
+}
+
+#input_new_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
 }

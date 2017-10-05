@@ -12,6 +12,7 @@ $(document).ready(function () {
  */
 function open_edit_profile() {
     $('#profile_edit').show();
+    $('#btn_image_input').show();
     $('#profile_info').hide();
 }
 
@@ -20,5 +21,6 @@ function open_edit_profile() {
  */
 function close_edit_profile() {
     $('#profile_edit').hide();
+    $('#btn_image_input').hide();
     $('#profile_info').show();
 }
