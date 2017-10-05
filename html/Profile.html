@@ -190,12 +190,33 @@
                                 </div>
                             </div>
 
+                            <!--Delete profile dialog-->
+                            <div id="delete_profile_dialog" class="modal">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Delete Profile</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Are you sure you want to delete a profile?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger">Delete profile</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <button class="btn btn-primary btn_profile" onclick="close_edit_profile()">
                                 Save profile
                             </button>
                             <button class="btn btn-secondary btn_profile" onclick="close_edit_profile()">Cancel</button>
                             <button type="button" class="btn btn-warning btn_profile" data-toggle="modal" data-target="#password_change_dialog">Change password</button>
-                            <button class="btn btn-danger btn_profile">Delete profile</button>
+                            <button type="button" class="btn btn-danger btn_profile" data-toggle="modal" data-target="#delete_profile_dialog">Delete profile</button>
                         </div>
                     </div>
                 </div>
