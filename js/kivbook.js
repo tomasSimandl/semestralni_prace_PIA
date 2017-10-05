@@ -5,6 +5,13 @@ $(document).ready(function () {
     $('.date').datepicker({
         startDate: "1.1.1900"
     });
+
+    $('[data-toggle="popover"]').popover({
+        html: true,
+        content: function() {
+            return $('#popover-content').html();
+        }
+    });
 });
 
 /**

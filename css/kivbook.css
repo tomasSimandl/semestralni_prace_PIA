@@ -63,6 +63,9 @@ body{
     word-break: break-all;
 }
 
+.btn {
+    cursor: pointer;
+}
 
 /*Buttons*/
 .btn_post_del:hover,
@@ -83,6 +86,7 @@ body{
     padding: 0;
     opacity: 0.15;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 .btn_post_del,

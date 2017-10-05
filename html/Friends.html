@@ -21,6 +21,7 @@
         <!--OpenIconic-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.css" />
 
+        <script src="../js/kivbook.js"></script>
     </head>
 
     <body class="bg_silver">
@@ -28,21 +29,32 @@
         <nav class="navbar fixed-top px-0">
             <div class="container flex-nowrap">
 
-                <a id="navbar_title" class="navbar-brand" href="Wall.html">KivBook</a>
+                <a id="navbar_title" class="navbar-brand mr-0" href="Wall.html">KivBook</a>
 
-                <form class="form-inline">
-                    <div class="input-group">
-                        <input class="form-control form-control-sm" type="text" placeholder="Search" aria-label="Search">
-                        <span class="input-group-btn">
-                            <button class="btn btn-sm btn-primary" type="submit">
-                                <span class="oi oi-magnifying-glass" aria-hidden="true"></span>
-                            </button>
-                        </span>
-                    </div>
-                </form>
+                <div class="row flex-nowrap m-0">
+                    <a tabindex="0" class="btn cursor_pointer bg-transparent text-white oi oi-chat" role="button" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Notifications" data-content=""></a>
 
+                    <form class="form-inline">
+                        <div class="input-group">
+                            <input class="form-control form-control-sm" type="text" placeholder="Search" aria-label="Search">
+                            <span class="input-group-btn">
+                                <button class="btn btn-sm btn-primary" type="submit">
+                                    <span class="oi oi-magnifying-glass" aria-hidden="true"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
             </div>
         </nav>
+
+        <!--Popover content-->
+        <div id="popover-content" class="d-none">
+            <ul class="list-group">
+                <li class="list-group-item">Luke Skywalker likes your post</li>
+                <li class="list-group-item">Friendship request from Padme</li>
+            </ul>
+        </div>
 
         <!--List of people-->
         <div class="container p-1">
