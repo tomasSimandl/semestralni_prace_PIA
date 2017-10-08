@@ -2,6 +2,12 @@ body{
     padding-top: 65px;
 }
 
+.heading_2 {
+    font-size: inherit;
+    margin-bottom: 0;
+    line-height: inherit;
+}
+
 .bg_silver {
     background-color: silver
 }
