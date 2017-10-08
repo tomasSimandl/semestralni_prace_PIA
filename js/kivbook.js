@@ -12,6 +12,10 @@ $(document).ready(function () {
             return $('#popover-content').html();
         }
     });
+
+    $('#post_input')
+        .focus(function () {this.rows = 4;})
+        .blur(function () {this.rows = 1;});
 });
 
 /**
